@@ -1,0 +1,10 @@
+﻿<div class="content-form">
+        <h3>Yorum Bırakın</h3>
+        <form method="post">
+            <input type="hidden" name="Blogid" value="@ViewBag.ID" />
+            <input type="text" name="KullaniciADi" placeholder="Name" required />
+            <input type="text" name="Mail" placeholder="Email" required />
+            <textarea name="Yorum" placeholder="Message"></textarea>
+            <input type="submit" value="Gönder" />
+        </form>
+    </div>

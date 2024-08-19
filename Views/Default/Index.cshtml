@@ -1,0 +1,119 @@
+﻿@using WebApplication1.Models.Classes
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+
+
+<body>
+    
+   
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot">Son Gezilerim</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Yemek</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src=" ~/web/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Seyahat</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Blog</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Tavsiyeler</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider" style="width:650px;height:366px">
+                           
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+
+                                    <li><a href="/Blog/BlogDetay/@x.ID"><img src="@x.BlogImage" alt=""></a></li>
+                                }
+                                </ul>
+                          
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Gezi Blog Sayfama Hoş Geldiniz!</h3>
+                    <p>
+                        Merhaba Dünya!
+
+                        Bloguma hoş geldiniz! Benimle birlikte dünyayı keşfetmeye hazır mısınız? Adım Ahmet, ben gezmeyi seven bir ruh, doğanın büyüsüne hayran ve farklı kültürlerle tanışmayı seven biriyim. Bu blog, benim gözümden dünya üzerindeki çeşitli köşeleri keşfetmek, deneyimlerimi paylaşmak ve sizinle unutulmaz anılarımı paylaşmak için bir araç.
+
+                        Gezmek Bir Tutkudur
+
+                        Gezmek, sadece farklı coğrafyaları keşfetmek değil, aynı zamanda yeni insanlarla tanışmak, lezzetlerin peşinden gitmek ve yaşamın sunduğu her anın tadını çıkarmaktır. Bu blogda, seyahat etmek, güzel manzaraları görmek ve unutulmaz deneyimlere tanıklık etmek konularında sizi bilgilendirecek ve ilham verecek yazılar bulacaksınız.
+
+                        Siz de bu yolculukta benimle birlikte olun, dünyanın büyüsüne kapılın!</p>
+                    <br /><br />
+                        @Html.Action("Partial1", "Default")
+                        <div class="grids">
+                            <div class="box1">
+                                <br /><br />
+                                @Html.Action("Partial2", "Default")
+                                <br /><br />
+                                @Html.Action("Partial3", "Default")
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    
+</div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+
+

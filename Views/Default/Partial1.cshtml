@@ -1,0 +1,23 @@
+﻿@using WebApplication1.Models.Classes    
+@model List<Blog>
+<div class="con-bot">
+    @foreach (var x in Model)
+    {
+<div class="right">
+
+    <div class="bot-left">
+        <img src="@x.BlogImage" alt="" />
+    </div>
+    <div class="left-text" style="">
+        <h4>@x.Baslik</h4>
+        <span class="doller">@x.Tarih.ToString("dd:MM:yyyy")</span>
+        <p>@x.Aciklama.Substring(0,50)</p>
+        <p><a href="/Blog/BlogDetay/@x.ID"><span class="read">Devamını Oku >></span></a></p>
+    </div>
+</div>
+    }
+  
+    
+    <div class="clear"></div>
+
+    </div>

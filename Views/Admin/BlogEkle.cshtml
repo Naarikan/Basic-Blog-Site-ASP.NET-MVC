@@ -1,0 +1,35 @@
+﻿@model WebApplication1.Models.Classes.Blog
+
+@{
+    ViewBag.Title = "BlogEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>BlogEkle</h2>
+<br />
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.Baslik)
+    <br />
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    <br />
+    @Html.LabelFor(x => x.Tarih)
+    <br />
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    <br />
+    @Html.LabelFor(x => x.BlogImage)
+    <br />
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    <br />
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    <br />
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-primary">Blog Ekle</button>
+</form>
+

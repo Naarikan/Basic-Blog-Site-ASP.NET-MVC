@@ -1,0 +1,26 @@
+﻿@using WebApplication1.Models.Classes
+@model List<Hakkimizda>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>About</h3>
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <img src="@Model[i].FotoUrl" alt="" />
+                <p>@Model[i].Aciklama</p>
+                <br />
+
+                if (i < Model.Count - 1)
+                {
+                    <h3>About</h3>
+                }
+            }
+        </div>
+    </div>
+</div>
